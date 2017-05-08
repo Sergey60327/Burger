@@ -1,12 +1,13 @@
-CREATE DATABASE burgers_db;
+CREATE DATABASE burgers_db3;
 
-USE burgers_db;
+USE burgers_db3;
 
 CREATE TABLE burgers(
   
   id INT NOT NULL AUTO_INCREMENT,
-  burger_name VARCHAR(50) NOT NULL,
-  devoured boolean NOT NULL,
-  date timestamp NOT NULL,
+  burger_name VARCHAR(255) NOT NULL,
+  devoured boolean DEFAULT false,
+  ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  dt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );
